@@ -208,3 +208,7 @@ stash/*
 TestResults/*
 docs/*
 backup/*
+
+.vscode/launch.json
+
+.vscode/settings.json

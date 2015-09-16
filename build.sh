@@ -24,15 +24,15 @@ fi
 
 if test ! -d packages/KoreBuild; then
     mono .nuget/nuget.exe install KoreBuild -ExcludeVersion -o packages -nocache -pre
-    mono .nuget/nuget.exe install Sake -version 0.2 -o packages -ExcludeVersion
+    mono .nuget/nuget.exe install Sake -o packages -ExcludeVersion
 fi
 
 if ! type k > /dev/null 2>&1; then
-    source packages/KoreBuild/build/kvm.sh
+    source packages/KoreBuild/build/dnvm.sh
 fi
 
 if ! type k > /dev/null 2>&1; then
-    kvm upgrade
+    dnvm upgrade
 fi
 
 mono packages/Sake/tools/Sake.exe -I packages/KoreBuild/build -f makefile.shade "$@"
