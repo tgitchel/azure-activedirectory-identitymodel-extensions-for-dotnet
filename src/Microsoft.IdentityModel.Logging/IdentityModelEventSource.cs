@@ -25,7 +25,7 @@ namespace Microsoft.IdentityModel.Logging
     /// <summary>
     /// Event source based logger to log different events.
     /// </summary>
-    [EventSource(Name = "Microsoft.IdentityModel.EventSource")]
+    [EventSource(Name = "Microsoft.IdentityModel.IdentityModelEventSource")]
     public class IdentityModelEventSource : EventSource
     {
         private static EventLevel _logLevel;
@@ -41,7 +41,7 @@ namespace Microsoft.IdentityModel.Logging
         /// </summary>
         public static IdentityModelEventSource Logger { get; }
 
-        [Event(1, Level = EventLevel.Verbose)]
+        [Event(1)]
         public void WriteVerbose(string message)
         {
             if (IsEnabled() && _logLevel >= EventLevel.Verbose)
@@ -51,7 +51,7 @@ namespace Microsoft.IdentityModel.Logging
             }
         }
 
-        [Event(2, Level = EventLevel.Informational)]
+        [Event(2)]
         public void WriteInformation(string message)
         {
             if (IsEnabled() && _logLevel >= EventLevel.Informational)
@@ -61,7 +61,7 @@ namespace Microsoft.IdentityModel.Logging
             }
         }
 
-        [Event(3, Level = EventLevel.Warning)]
+        [Event(3)]
         public void WriteWarning(string message)
         {
             if (IsEnabled() && _logLevel >= EventLevel.Warning)
@@ -71,7 +71,7 @@ namespace Microsoft.IdentityModel.Logging
             }
         }
 
-        [Event(4, Level = EventLevel.Error)]
+        [Event(4)]
         public void WriteError(string message)
         {
             if (IsEnabled() && _logLevel >= EventLevel.Error)
@@ -81,7 +81,7 @@ namespace Microsoft.IdentityModel.Logging
             }
         }
 
-        [Event(5, Level = EventLevel.Critical)]
+        [Event(5)]
         public void WriteCritical(string message)
         {
             if (IsEnabled() && _logLevel >= EventLevel.Critical)
