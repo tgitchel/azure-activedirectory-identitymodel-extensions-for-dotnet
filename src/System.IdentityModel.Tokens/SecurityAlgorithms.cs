@@ -62,5 +62,8 @@ namespace System.IdentityModel.Tokens
         public const string SHA256 = "SHA256";
         public const string SHA384 = "SHA384";
         public const string SHA512 = "SHA512";
+        public const string PS256 = "PS256";
+        public const string PS384 = "PS384";
+        public const string PS512 = "PS512";
     }
 }
