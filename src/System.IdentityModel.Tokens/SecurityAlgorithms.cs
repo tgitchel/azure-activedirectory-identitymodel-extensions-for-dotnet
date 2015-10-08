@@ -59,5 +59,8 @@ namespace System.IdentityModel.Tokens
         public const string RSA_SHA256 = "RS256";
         public const string RSA_SHA384 = "RS384";
         public const string RSA_SHA512 = "RS512";
+        public const string SHA256 = "SHA256";
+        public const string SHA384 = "SHA384";
+        public const string SHA512 = "SHA512";
     }
 }
